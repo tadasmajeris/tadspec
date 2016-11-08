@@ -1,13 +1,19 @@
 var assert = {
-  isTrue: function(check) {
-    if(!check) {
-      throw new Error("Assertion failed: " + check + " is not truthy")
-    } else {
-      console.log('GREEN: ' + check + " is truthy")
-    }
+
+  addArgument: function(arg) {
+    this.assertArgument = arg;
+    return this;
   },
 
-  isEqual: function(arg, n) {
-    this.isTrue(arg === n);
+  toEqual: function(n) {
+    if(this.assertArgument === n) {
+      console.log('GREEN: expected '  + n + ', and got ' + this.assertArgument)
+    } else {
+      throw new Error('expected ' + n + ', but got ' + this.assertArgument)
+    }
   }
+}
+
+var expect = function(argument) {
+  return assert.addArgument(argument);
 }
