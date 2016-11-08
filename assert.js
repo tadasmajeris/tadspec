@@ -2,7 +2,6 @@ var assert = {
 
   addArgument: function(arg) {
     this.assertArgument = arg;
-    return this;
   },
 
   addDescription: function(string) {
@@ -31,8 +30,8 @@ var assert = {
 }
 
 var expect = function(argument) {
-  return assert.addArgument(argument);
-  assert.addArgument(null);
+  assert.addArgument(argument);
+  return assert
 }
 
 var describe = function(description, funct){
