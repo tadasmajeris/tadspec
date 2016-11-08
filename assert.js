@@ -32,14 +32,17 @@ var assert = {
 
 var expect = function(argument) {
   return assert.addArgument(argument);
+  assert.addArgument(null);
 }
 
 var describe = function(description, funct){
   assert.addDescription(description);
   funct();
+  assert.addDescription('');
 }
 
 var it = function(description, funct){
   assert.addTestDescription(description);
   funct();
+  assert.addDescription('');
 }
