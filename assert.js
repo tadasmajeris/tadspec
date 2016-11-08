@@ -7,9 +7,9 @@ var assert = {
 
   toEqual: function(n) {
     if(this.assertArgument === n) {
-      console.log('GREEN: expected '  + n + ', and got ' + this.assertArgument)
+      console.log("GREEN: expected '"  + n + "', and got '" + this.assertArgument + "'")
     } else {
-      throw new Error('expected ' + n + ', but got ' + this.assertArgument)
+      throw new Error("expected '" + n + "', but got '" + this.assertArgument + "'")
     }
   }
 }
