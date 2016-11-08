@@ -43,5 +43,5 @@ var describe = function(description, funct){
 var it = function(description, funct){
   assert.addTestDescription(description);
   funct();
-  assert.addDescription('');
+  assert.addTestDescription('');
 }
