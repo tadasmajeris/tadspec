@@ -32,5 +32,5 @@ var expect = function(argument) {
 
 var it = function(description, funct){
   assert.addTestDescription(description);
-  func();
+  funct();
 }
